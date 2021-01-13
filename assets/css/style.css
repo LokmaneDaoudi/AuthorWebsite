@@ -12,11 +12,14 @@ html {
 
 body{
   overflow-x: hidden;
+  
 }
 
 :root {
   --mainColor: #3D72A4;
+  --home-color:#000000;
 }
+
 /* === Navigation Bar === */
 a {
   text-decoration: none;
@@ -26,13 +29,13 @@ a {
 header {
   width: 100%;
   height: 100vh;
-  background-color: #000000;
+  background-color: var(--home-color);
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .container {
-  max-width: 120rem;
+
   width: 90%;
   margin: 0 auto;
 }
@@ -157,12 +160,82 @@ nav ul li a:hover::after {
   }
 }
 
+/* === Home Screen === */
+.about-me-section{
+  color:#fff;
+ 
+  
+}
+/* ==== Mobile salutation === */
+.mobile-salutation{
+  display: none;
+  padding-top: 50%;
+  font-size: 2.6rem;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  text-transform: capitalize;
+  
+}
 
+.highlight-effect{
+  display: inline-block;
+  position: relative;
+}
+
+.highlight-effect::after{
+  content:'';
+  position: absolute;
+  bottom:0;
+  left:0;
+  height: 0;
+  width: 100%;
+  background:transparent;
+  height:14px;
+  background: rgb(61, 114, 164,0.89)
+}
+
+/*===========================*/
+.text-section{
+color:white;
+
+
+}
+.about-me-section img{
+  width: 45%;
+  float:right;
+  margin-top: -12%;
+ 
+}
+.home-headline{
+  position: absolute;
+  top:40%;
+  font-family: 'montserrat',sans-serif;
+  font-weight: 300;
+  font-size: 3rem;
+  text-transform: uppercase;
+
+}
+/* === Cursor for the effect === */
+.txt-type > .txt{
+  border-right:0.2rem solid #777;
+}
 /*=== Media querries===*/
 
 @media screen and (max-width: 764px) {
+  .inactive-link{
+    pointer-events: none;
+    cursor: default;
+  }
+
   .menu-toggle {
     display: block;
+  }
+
+  header{
+    height:100vh;
+  
   }
 
   nav {
@@ -173,6 +246,7 @@ nav ul li a:hover::after {
     align-items: center;
     height: 100vh;
     text-align: center;
+
   }
 
   nav ul {
@@ -192,9 +266,8 @@ nav ul li a:hover::after {
     font-size: 3rem;
   }
 
-  .brand .brand-effect:hover{
-    background: transparent;
-    background-size:0;
+  .brand .brand-effect{
+    background:unset;
   }
 
   .menu-open,
@@ -203,4 +276,21 @@ nav ul li a:hover::after {
     transform: scale(1);
     opacity: 1;
   }
+
+  /* === Image-section ===*/
+  .img-section{
+    display:none;
+  }
+
+  .home-headline{
+    position: unset;
+   font-size: 2.3rem;
+   text-align: center;
+   padding-top:10%;
+  }
+  .mobile-salutation{
+    display: block;
+  }
+
+  
 }

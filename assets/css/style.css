@@ -7,17 +7,16 @@
 
 html {
   font-size: 10px;
-  font-family: 'montserrat', sans-serif;
+  font-family: "montserrat", sans-serif;
 }
 
-body{
+body {
   overflow-x: hidden;
-  
 }
 
 :root {
-  --mainColor: #3D72A4;
-  --home-color:#000000;
+  --mainColor: #3d72a4;
+  --home-color: #000000;
 }
 
 /* === Navigation Bar === */
@@ -35,7 +34,6 @@ header {
 }
 
 .container {
-
   width: 90%;
   margin: 0 auto;
 }
@@ -62,29 +60,28 @@ nav {
 
 .brand {
   font-size: 2.9rem;
-  color:#fff;
-  font-family: 'inconsolata',sans-serif;
+  color: #fff;
+  font-family: "inconsolata", sans-serif;
   font-weight: 400;
   transform: translateX(-100rem);
   animation: slideIn 0.5s forwards;
-
 }
 
-.brand .brand-effect{
-  background:
-     linear-gradient(
-       to bottom, var(--mainColor) 0%,
-       var(--mainColor) 100%
-     );
+.brand .brand-effect {
+  background: linear-gradient(
+    to bottom,
+    var(--mainColor) 0%,
+    var(--mainColor) 100%
+  );
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 4px 4px;
   color: #fff;
   text-decoration: none;
-  transition: background-size .6s;
+  transition: background-size 0.6s;
 }
 
-.brand .brand-effect:hover{
+.brand .brand-effect:hover {
   background-size: 4px 50px;
 }
 
@@ -131,7 +128,7 @@ nav ul li a::after {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #3D72A4;
+  background-color: #3d72a4;
   left: 0;
   transform: scaleX(0);
   transition: all 0.5s;
@@ -160,71 +157,86 @@ nav ul li a:hover::after {
   }
 }
 
-/* === Home Screen === */
-.about-me-section{
-  color:#fff;
- 
-  
+/*** === Home Screen === ***/
+.about-me-section {
+  color: #fff;
 }
+
 /* ==== Mobile salutation === */
-.mobile-salutation{
+.mobile-salutation {
   display: none;
   padding-top: 50%;
   font-size: 2.6rem;
-  font-family: 'Bodoni Moda', serif;
+  font-family: "Bodoni Moda", serif;
   font-weight: 300;
   font-style: italic;
   text-align: center;
   text-transform: capitalize;
-  
 }
 
-.highlight-effect{
+.highlight-effect {
   display: inline-block;
   position: relative;
 }
 
-.highlight-effect::after{
-  content:'';
+.highlight-effect::after {
+  content: "";
   position: absolute;
-  bottom:0;
-  left:0;
+  bottom: 0;
+  left: 0;
   height: 0;
   width: 100%;
-  background:transparent;
-  height:14px;
-  background: rgb(61, 114, 164,0.89)
+  background: transparent;
+  height: 14px;
+  background: rgb(61, 114, 164, 0.89);
 }
 
 /*===========================*/
-.text-section{
-color:white;
-
-
-}
-.about-me-section img{
-  width: 45%;
-  float:right;
-  margin-top: -12%;
- 
-}
-.home-headline{
+.text-section {
+  color: white;
   position: absolute;
-  top:40%;
-  font-family: 'montserrat',sans-serif;
-  font-weight: 300;
-  font-size: 3rem;
-  text-transform: uppercase;
+  top: 40%;
+}
+.about-me-section img {
+  width: 36%;
+  border-radius: 50%;;
+  float: right;
+  margin-top: -12%;
+  margin-left:2rem;
+}
 
+.home-headline {
+  font-family: "montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 2.6rem;
+  text-transform: uppercase;
+}
+
+.brief-bio{
+  padding-top:1.6rem;
+  font-size: 1.7rem;
+  line-height: 1.7em;
 }
 /* === Cursor for the effect === */
-.txt-type > .txt{
-  border-right:0.2rem solid #777;
+.txt-type > .txt {
+  border-right: 0.2rem solid #777;
 }
-/*=== Media querries===*/
 
-@media screen and (max-width: 764px) {
-  .inactive-link{
+/* ==== Social Media Icons styling ====*/
+.social-media-icons{
+  position: absolute;
+  font-size: 3.5em;
+  font-weight: 300;
+  top:70%;
+}
+
+.social-media-icons i {
+  color:var(--mainColor);
+}
+/**** ====== Media querries ======*/
+
+@media screen and (max-width: 800px) {
+  .inactive-link {
     pointer-events: none;
     cursor: default;
   }
@@ -233,9 +245,8 @@ color:white;
     display: block;
   }
 
-  header{
-    height:100vh;
-  
+  header {
+    height: 100vh;
   }
 
   nav {
@@ -246,7 +257,6 @@ color:white;
     align-items: center;
     height: 100vh;
     text-align: center;
-
   }
 
   nav ul {
@@ -266,8 +276,8 @@ color:white;
     font-size: 3rem;
   }
 
-  .brand .brand-effect{
-    background:unset;
+  .brand .brand-effect {
+    background: unset;
   }
 
   .menu-open,
@@ -276,21 +286,42 @@ color:white;
     transform: scale(1);
     opacity: 1;
   }
-
-  /* === Image-section ===*/
-  .img-section{
-    display:none;
+  /*** ===== Home (responsive) ====***/
+  /* === about-me-section ===*/
+  .img-section {
+    display: none;
   }
-
-  .home-headline{
+  .text-section {
     position: unset;
-   font-size: 2.3rem;
-   text-align: center;
-   padding-top:10%;
   }
-  .mobile-salutation{
+  
+  .home-headline {
+    position: unset;
+    font-size: 1.9rem;
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 2rem;
+  }
+  .mobile-salutation {
     display: block;
   }
+ 
+  /* === Brief Bio ===*/
+  .brief-bio br{
+    display: none;
+  }
 
+  .brief-bio{
+   
+    font-size: 1.8rem;
+    text-align: justify;
+    
+  }
   
+  .social-media-icons{
+    position: unset;
+    margin-top:1.6rem;
+    text-align: center;
+  }
+
 }

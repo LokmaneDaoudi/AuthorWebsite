@@ -380,4 +380,12 @@ nav ul li a:hover::after {
   margin-right: 2rem;
   align-items: center;
 }
+
+.text-field h1{
+  text-align: center;
+}
+.text-field{
+  text-align: justify;
+  width:-2px;
+}
 }

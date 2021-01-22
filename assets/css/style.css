@@ -162,6 +162,8 @@ nav ul li a:hover::after {
 /*** === Home Screen === ***/
 .about-me-section {
   color: #fff;
+  
+
 }
 
 /* ==== Mobile salutation === */
@@ -200,10 +202,9 @@ nav ul li a:hover::after {
   top: 40%;
 }
 .about-me-section img {
-  width: 36%;
-  border-radius: 50%;;
+  width: 33%;
   float: right;
-  margin-top: -12%;
+  margin-top: 0.7rem;
   margin-left:2rem;
 }
 
@@ -265,7 +266,9 @@ nav ul li a:hover::after {
 
 .flex-container img{
   width:35%;
-  margin-right: 9rem;
+  position: relative;
+  top:1.2rem;
+  margin-right: 6rem;
   
 }
 
@@ -273,6 +276,7 @@ nav ul li a:hover::after {
   font-family: 'montserrat',sans-serif;
   text-transform: capitalize;
   font-size:2.7em;
+  color:var(--SecondaryColor);
  
 }
 
@@ -377,7 +381,8 @@ nav ul li a:hover::after {
 }
 .flex-container img{
   width:90%;
-  margin-right: 2rem;
+  position:unset;
+  margin-left: 6.5rem;
   align-items: center;
 }
 
